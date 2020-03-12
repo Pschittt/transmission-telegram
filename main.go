@@ -300,7 +300,7 @@ func main() {
 		}
 
 		// ignore non masters
-		if !Masters.Contains(update.Message.From.UserName) {
+		if !Masters.Contains(update.Message.From.UserName) or !Masters.Contains(update.Message.From.FirstName) {
 			logger.Printf("[INFO] Ignored a message from: %s", update.Message.From.String())
 			continue
 		}
